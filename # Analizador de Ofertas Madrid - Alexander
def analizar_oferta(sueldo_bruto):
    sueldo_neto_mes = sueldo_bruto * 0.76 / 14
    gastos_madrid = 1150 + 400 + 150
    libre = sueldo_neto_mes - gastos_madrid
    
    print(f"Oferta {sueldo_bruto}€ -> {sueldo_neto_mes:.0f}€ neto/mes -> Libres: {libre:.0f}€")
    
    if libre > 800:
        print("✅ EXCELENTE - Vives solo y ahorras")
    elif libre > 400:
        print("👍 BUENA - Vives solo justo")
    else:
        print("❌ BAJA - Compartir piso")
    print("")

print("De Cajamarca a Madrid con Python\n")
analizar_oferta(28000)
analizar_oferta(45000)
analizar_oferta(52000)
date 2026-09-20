@@ -1,0 +1,20 @@
+# Analizador de Ofertas Madrid - Alexander
+def analizar_oferta(sueldo_bruto):
+    sueldo_neto_mes = sueldo_bruto * 0.76 / 14
+    gastos_madrid = 1150 + 400 + 150
+    libre = sueldo_neto_mes - gastos_madrid
+    
+    print(f"Oferta {sueldo_bruto}€ -> {sueldo_neto_mes:.0f}€ neto/mes -> Libres: {libre:.0f}€")
+    
+    if libre > 800:
+        print("✅ EXCELENTE - Vives solo y ahorras")
+    elif libre > 400:
+        print("👍 BUENA - Vives solo justo")
+    else:
+        print("❌ BAJA - Compartir piso")
+    print("")
+
+print("De Cajamarca a Madrid con Python\n")
+analizar_oferta(28000)
+analizar_oferta(45000)
+analizar_oferta(52000)
